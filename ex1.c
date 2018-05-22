@@ -5,7 +5,7 @@
 int main(int argc, char *argv[])
 {
 	srand( (unsigned)time( NULL) );
-	int hit = (rand() % 50); //We generate a random number between 0 and 50
+	int hit = (rand() % 50); //We generate a random number between 0 and 49
 	int distance = 100;
 	int zombie = 4;
 	int zombie_health = 100;
