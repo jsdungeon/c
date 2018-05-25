@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 				hit = (rand() % 80);			
 				printf("You fight and attack the Zombie closest to you!\n");
 				printf("You hit the Zombie and caused %d damage!\n",hit);
-					if ( zombieHealth - hit > 0 )
+					if ( zombieHealth - hit > 0 ) //We need to subtract the hit here!
 						{				
 							printf("The Zombie has %d health left.\n\n",(zombieHealth - hit));
 							zombieHealth = zombieHealth - hit;
