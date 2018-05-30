@@ -22,32 +22,31 @@ int main(int argc, char *argv[])
 	printf("\nYou see %d Zombies arriving!\n", zombie);
 	zombie = zombie - deadlyBlast;
 	printf("You hit a Zombie hard and placed a deadly blast against his rotten skull!\nThere are %d Zombies left!\n", zombie);
-	printf("\nEnter '0' for running away or '1' to fight:\n"
-			"Type a letter to end your input.\n");
+	printf("\nEnter '0' for running away or '1' to fight:\n");
 //	while( scanf( "%lf", &decision ) == 0 )
 	while( scanf( "%d", &decision ) == 0 )
-	
+
 			printf("Your decision is: \n %d ", decision);
 		{
 		if ( decision == 0 )
-		{		
+		{
 		printf("You avoid the fight and run away. There are %d Zombies following you!\n", zombie);
-		}		
-		else 
-		{		
+		}
+		else
+		{
 			printf("The Zombie has %d health left.\n",(zombieHealth));
-			while( zombieHealth >= 0)	
-	
-				{	
-				hit = (rand() % 80);			
+			while( zombieHealth >= 0)
+
+				{
+				hit = (rand() % 80);
 				printf("You fight and attack the Zombie closest to you!\n");
 				printf("You hit the Zombie and caused %d damage!\n",hit);
 					if ( zombieHealth - hit > 0 ) //We need to subtract the hit here!
-						{				
+						{
 							printf("The Zombie has %d health left.\n\n",(zombieHealth - hit));
 							zombieHealth = zombieHealth - hit;
 						}
-						else 
+						else
 							{
 								 printf("\nThe Zombie is dead!\n");
 								 break;
