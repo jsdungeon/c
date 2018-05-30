@@ -12,6 +12,26 @@ int main(int argc, char *argv[])
 	int deadlyBlast = 1;
 	int decision = 10;
 	int attack = 0;
+	int dungeon0[5][5]; //declaration of a two-dimensional array
+	int dungeon1[5][5];
+	int dungeon2[5][5];
+	int dungeon3[5][5];
+	/* The avove arrays are needed to create the map of the dungeon.
+	A 0 means there is no connection to the next room and a 1 means that There
+	is a connection to the next room.
+	Example:
+	dungeon0[0][0] = 0 means that we can't go north.
+	dungeon1[0][0] = 1 means that we can go east.
+	dungeon2[0][0] = 1 means that we can go south.
+	dungeon3[0][0 = 0 means that we can't go west.
+	*/
+
+	dungeon0[0][0] = 0;
+	dungeon1[0][0] = 1;
+	dungeon2[0][0] = 1;
+	dungeon3[0][0] = 0;
+	/*The above declaration means that the first room 0,0 has exits to the
+	east and south*/
 
 	// this is also a comment
 	printf("You are %d miles away.\n", distance);
