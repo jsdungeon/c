@@ -26,12 +26,29 @@ int main(int argc, char *argv[])
 	dungeon3[0][0 = 0 means that we can't go west.
 	*/
 
+	/*below I declare a multi-dimensional array for testing the dungeon
+	architecture. This is the next iteration of the above two-dimensional arrays*/
+	int dungeon [5][5][0][0][0][0][0][0][0][0][0];
+	/*
+The 11 fields are representing this:
+0 + 1 = Coordinates of the room
+2,3,4,5 = Exits N,E,S,W
+7,9 = Up, down
+10 = Monster
+11 = Food
+12 = Weapon
+	*/
+	/*Here I am poulating the first room at [0][0]*/
+	dungeon [0][0][0][1][1][0][0][0][0][1][1];
+
 	dungeon0[0][0] = 0;
 	dungeon1[0][0] = 1;
 	dungeon2[0][0] = 1;
 	dungeon3[0][0] = 0;
 	/*The above declaration means that the first room 0,0 has exits to the
 	east and south*/
+
+
 
 	// this is also a comment
 	printf("You are %d miles away.\n", distance);
