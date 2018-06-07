@@ -35,6 +35,10 @@
 		char resE = ' ';
 		char resS = ' ';
 		char resW = ' ';
+		srand( (unsigned)time( NULL ) );
+		int randomRoom = (rand() % 25); //We generate a random number between 0 and 24
+		i = randomRoom;
+		room = randomRoom;
 int checkExits(int i) {
 
 	//int testExtDungeonRoom[25][9];
@@ -96,8 +100,7 @@ int main(int argc, char *argv[])
 	char exitS;
 	char exitW;
 
-i = 15;
-room = 20;
+
 testEx = testExtDungeonRoom[i][0];
 printf("testExtDungeonRoom [0][0] value = %d\n\n",testEx );
 printf("You are in room %d\n\n",room );
