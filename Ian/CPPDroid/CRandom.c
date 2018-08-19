@@ -10,7 +10,7 @@ char name[MAX_STRING_LEN];// need to figure Strings out
 int randomnumber = rand() %10 + 1;//random number
 int guess; //user guess
 int counter = 0; //to keep guessing
-int correct = 0;
+int correct = 0; //game ends when this is 1
 
 printf("Hello, welcome to my app\n");
 printf("What is your name?\n");
