@@ -7,10 +7,9 @@ int main(){
 //declare variables
 
 char name[MAX_STRING_LEN];// need to figure Strings out
-int randomnumber = rand() %10 + 1;//random number
+
 int guess; //user guess
-int counter = 0; //to keep guessing
-int correct = 0; //game ends when this is 1
+
 
 printf("Hello, welcome to my app\n");
 printf("What is your name?\n");
@@ -21,9 +20,20 @@ printf("Can you guess the number I'm thinking of between 1-10?\n");
 
 //compare guess
         printf("Enter a number between 1 - 10\n");
-        do {
-              scanf("%d", &guess);
-        if (guess == randomnumber)
+        guessNumber(guess);
+
+return 0;
+}
+
+int guessNumber (int num){
+
+int randomnumber = rand() %10 + 1;//random number
+int counter = 0; //to keep guessing
+int correct = 0; //game ends when this is 1
+
+ do {
+        scanf("%d", &num);
+        if (num == randomnumber)
         {
 
              counter++; //increase counter
@@ -31,20 +41,22 @@ printf("Can you guess the number I'm thinking of between 1-10?\n");
              correct = 1; //game ends
         }
 
-        if (guess < randomnumber)
+        if (num < randomnumber)
         {
              counter++; //increase counter
              printf("Your guess is too low.  Guess again\n");
 
         }
 
-        if (guess > randomnumber)
+        if (num > randomnumber)
         {
              counter++; //increase counter
              printf("Your guess is too high.  Guess again\n");
 
         }
+
+
        }   while (correct == 0);
 
-return 0;
+          return num;
 }
