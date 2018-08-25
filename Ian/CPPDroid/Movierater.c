@@ -3,7 +3,7 @@
 #include <stdio.h>
 
  //Declare some variables
-    
+
     char answer;
     char FilmTitle[60];
     int rating;
@@ -11,7 +11,7 @@
 
 int main()
 {
-    
+
     printf("What is your name?\n");
     scanf("%s", &name);
     printf("Welcome to my movie rating program %s\n", name);
@@ -23,38 +23,38 @@ int main()
     {
         printf("Okay then. Goodbye!");
     }
-   
+
     else if (answer == 'y' || answer == 'Y'){
         printf("What rating will you give %s(Enter 1 - 5)?\n", FilmTitle);
-        scanf("%d", &rating);  
+        scanf("%d", &rating);
         if (rating == 1) {
                 printf("%s must be a terrible movie\n", FilmTitle);
-            }   
+            }
       else if (rating == 2) {
                 printf("%s must be an okay  movie\n", FilmTitle);
-            }   
+            }
     else if (rating == 3) {
                 printf("%s might be worth seeing then\n", FilmTitle);
-            }   
-  
+            }
+
     else if (rating == 4) {
                 printf("%s must be a pretty good movie\n", FilmTitle);
-            }   
+            }
     else if (rating == 5) {
                 printf("%s must be a great movie and worth seeing in a cinema\n", FilmTitle); }
      else {
-                
-            
+
+
         printf("Incorrect rating entered");
         printf("What rating will you give %c(Enter 1 - 5)?\n", FilmTitle);
         scanf("%d", &rating);
             }
-    
+
         printf("That's all folks!\n");
-            
-        
+
+
     return 0;
-        
+
 }
-   
+
 }
